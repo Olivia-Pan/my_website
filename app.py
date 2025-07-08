@@ -251,7 +251,7 @@ with tab2:
     Austin, TX  
     _Apr 2025 – Present_  
     - Drafted social media content to promote an AI-powered snipping tool, driving tens of thousands of views and increasing product visibility through targeted digital marketing strategies
-    - Created and managed company's Discord community page, regulating discussions, engaging users, and maintained a positive and organized online environment to support community growth
+    - Created and managed company's Discord community page, regulating discussions, engaging users, and maintaining a positive and organized online environment to support community growth
                 
                 """)
     st.write("")
