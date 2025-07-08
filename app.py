@@ -89,7 +89,7 @@ st.markdown("<h3 style='text-align: left;'>Education</h3>", unsafe_allow_html=Tr
 st.markdown("""
     **The University of Texas at Austin**  
     *Bachelor of Science, double major in Statistics and Data Science & Economics*  
-    GPA: 3.83  
+    GPA: 3.84  
     Expected graduation: May 2026
     """)
 st.markdown('<a name="experience"></a>', unsafe_allow_html=True)
@@ -246,11 +246,19 @@ _Sep 2022 – Jul 2023_
 with tab2:
     
     st.markdown("<h3 style='text-align: left;'>Work Experience</h2>", unsafe_allow_html=True)
-    
+    st.markdown("""
+    **Snippai** — *Marketing Intern*,  
+    Austin, TX  
+    _Apr 2025 – Present_  
+    - Drafted social media content to promote an AI-powered snipping tool, driving tens of thousands of views and increasing product visibility through targeted digital marketing strategies
+    - Created and managed company's Discord community page, regulating discussions, engaging users, and maintained a positive and organized online environment to support community growth
+                
+                """)
+    st.write("")
     st.markdown("""
     **Pearl Tech** — *Marketing Intern*,  
     Austin, TX  
-    _Apr 2025 – Present_  
+    _Apr 2025 – July 2025_  
     - Initiated contact with influencers to drive pre-order purchases and enhance product visibility 
     - Designed and produced promotional video clip, posted on social media platforms to attract potential customers
 """)
