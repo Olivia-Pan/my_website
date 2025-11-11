@@ -122,7 +122,7 @@ with tab1:
 
 # Generate HTML to embed the PDF in an iframe
     pdf_viewer = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdf11}" width="100%" height="600" type="application/pdf"></iframe>
+    <iframe src="data:application/pdf;base64,{base64_pdf11}" width="100%" height="800" type="application/pdf"></iframe>
 """
 
 # Add collapsible reader
