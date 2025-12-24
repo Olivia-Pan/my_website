@@ -57,12 +57,13 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 with col1:
-    image1 = Image.open("olivia.jpg")
+    image1 = Image.open("DSC06142.jpg")
     image1 = ImageOps.exif_transpose(image1) 
     st.image(image1, width=600)
 
 with col2:
-    image2 = Image.open("olivia2.jpg")
+    image2 = Image.open("DSC06080.jpg")
+    image2 = ImageOps.exif_transpose(image2) 
     st.image(image2, width=500)
 
 st.write("")
@@ -89,7 +90,7 @@ st.markdown("<h3 style='text-align: left;'>Education</h3>", unsafe_allow_html=Tr
 st.markdown("""
     **The University of Texas at Austin**  
     *Bachelor of Science, double major in Statistics and Data Science & Economics*  
-    GPA: 3.84  
+    GPA: 3.87  
     Expected graduation: May 2026
     """)
 st.markdown('<a name="experience"></a>', unsafe_allow_html=True)
@@ -105,6 +106,24 @@ with tab1:
 
     st.markdown("<h3 style='text-align: left;'>Project Experience</h2>", unsafe_allow_html=True)
     
+    #projnew
+    st.markdown("""
+    **Elements of Data Analytics** — *Team Leader*  
+    _Sep 2025 – Dec 2025_  
+    - Goal was to learn what features are determinant for predicting track popularity of a song.
+    - Conducted data collection and cleaning, performed feature selection by using mutual info regression, then applied Extra Tree Regressor to generate predictions.
+    - Created data visualizations and presented insights in class.
+    """)
+    with open("CS329_Project.html", "r",encoding="utf-8") as f:
+        proj=f.read()
+    with st.expander("📓 Data Analytics Code"):
+        st.components.v1.html(proj, height=400, scrolling=True)
+
+    with open("CS_Stats_finalProject.html", "r",encoding="utf-8") as f:
+        projf=f.read()
+
+
+
     #proj1
     st.markdown("""
     **Time Series Forecasting Class Project** — *Team Leader*  
@@ -117,48 +136,27 @@ with tab1:
     with st.expander("🔽 R Code"):
         st.components.v1.html(html_content, height=500, scrolling=True)
 
-    with open("proj_2_rep.pdf", "rb") as f:
-        base64_pdf11 = base64.b64encode(f.read()).decode("utf-8")
-
-# Generate HTML to embed the PDF in an iframe
-    pdf_viewer = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdf11}" width="100%" height="800" type="application/pdf"></iframe>
-"""
-
-# Add collapsible reader
-    with st.expander("🔗 Project Report"):
-        st.markdown(pdf_viewer, unsafe_allow_html=True)
-
-    st.write("") 
-
     #proj 2
     st.markdown("""
-    **Data Visualization Class Project** — *Individual Project Owner*  
+    **Data Visualization Class Project** - *Individual Project Owner*  
     _Feb 2025 – May 2025_  
     - Applied Principal Component Analysis (PCA) for dimensionality reduction to simplify complex datasets while preserving key variance; interpreted results using rotation matrix and PC1 vs. PC2 scatterplots
     - Customized visualizations by designing appropriate plot types for different data
     """)
-    with open("pca_analysis.pdf", "rb") as f:
-        base64_pdfj = base64.b64encode(f.read()).decode("utf-8")
+    with open("pca_analysis.html", "r", encoding='utf-8') as f:
+        html_content2 = f.read()
 # Generate HTML to embed the PDF in an iframe
-    pdf_viewer = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdfj}" width="100%" height="600" type="application/pdf"></iframe>
-"""
+    
 # Add collapsible reader
     with st.expander("🔽 R Code for Stacked Barplot, Boxplot, and Sina plot Creation"):
-        st.markdown(pdf_viewer, unsafe_allow_html=True)
+        st.components.v1.html(html_content2, height=500, scrolling=True)
         
-    with open("sds_pro2.pdf", "rb") as f:
-        base64_pdfz = base64.b64encode(f.read()).decode("utf-8")
-# Generate HTML to embed the PDF in an iframe
-    pdf_viewer = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdfz}" width="100%" height="600" type="application/pdf"></iframe>
-"""
+
+    with open("sds_pro2.html", "r", encoding='utf-8') as f:
+        html_content3 = f.read()
 # Add collapsible reader
     with st.expander("🔽 R Code for Principle Component Analysis"):
-        st.markdown(pdf_viewer, unsafe_allow_html=True)
-    
-    st.write("") 
+        st.components.v1.html(html_content3, height=500, scrolling=True)
 
     #proj3
     st.markdown("""
@@ -298,19 +296,11 @@ with tab2:
     - Proposed a research paper topic, collected statistical data from authentic websites, conducted analysis through Stata, and authored a paper discussing the findings 
 """)
     
-    with open("fin_pa.pdf", "rb") as f:
-        base64_pdfr = base64.b64encode(f.read()).decode("utf-8")
-
-# Generate HTML to embed the PDF in an iframe
-    pdf_viewer = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdfr}" width="100%" height="600" type="application/pdf"></iframe>
-"""
-
+    with open("fin_pa.html", "r", encoding='utf-8') as f:
+        html_content4 = f.read()
 # Add collapsible reader
     with st.expander("🔗 Econometrics Research Report"):
-        st.markdown(pdf_viewer, unsafe_allow_html=True)
-
-    st.write("") 
+        st.components.v1.html(html_content4, height=500, scrolling=True)
 
     st.markdown("<h3 style='text-align: left;'>Economics Related Skills and Affiliations</h2>", unsafe_allow_html=True)
 
@@ -361,17 +351,17 @@ st.markdown("""
     - Conducted energy sector research, implemented a financial statement and an LBO model for the company using Excel, and presented the project
     """)
 
-with open("array.pdf", "rb") as f:
-    base64_pdf33 = base64.b64encode(f.read()).decode("utf-8")
+with open("Investment.pptx", "rb") as f:
+    ppt_data2 = f.read()
 # Generate HTML to embed the PDF in an iframe
-pdf_viewer2 = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdf33}" width="100%" height="600" type="application/pdf"></iframe>
-"""
-# Add collapsible reader
-with st.expander("🔽 Presentation Slides"):
-    st.markdown(pdf_viewer2, unsafe_allow_html=True)
-
+st.download_button(
+    label="📥 Download Presentation",
+    data=ppt_data2,
+    file_name="Investment.pptx",
+    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+)
 st.write("")
+
 
 st.markdown('<a name="lea"></a>', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: left;'>🌟 Leaderships</h2>", unsafe_allow_html=True)
@@ -387,6 +377,7 @@ st.markdown('<a name="languages"></a>', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: left;'>🌍 Languages</h2>", unsafe_allow_html=True)
 st.markdown("""
     - Fluent Mandarin  
+    - Fluent English
     - Advanced Cantonese
 """)
 
