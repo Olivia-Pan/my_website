@@ -143,7 +143,7 @@ with tab1:
     - Applied Principal Component Analysis (PCA) for dimensionality reduction to simplify complex datasets while preserving key variance; interpreted results using rotation matrix and PC1 vs. PC2 scatterplots
     - Customized visualizations by designing appropriate plot types for different data
     """)
-    with open("pca_analysis.html", "r", encoding='utf-8') as f:
+    with open("proj_1366.html", "r", encoding='utf-8') as f:
         html_content2 = f.read()
 # Generate HTML to embed the PDF in an iframe
     
@@ -152,7 +152,7 @@ with tab1:
         st.components.v1.html(html_content2, height=500, scrolling=True)
         
 
-    with open("sds_pro2.html", "r", encoding='utf-8') as f:
+    with open("pca_analysis.html", "r", encoding='utf-8') as f:
         html_content3 = f.read()
 # Add collapsible reader
     with st.expander("🔽 R Code for Principle Component Analysis"):
@@ -196,7 +196,7 @@ with tab1:
     with st.expander("📄 View Python code"):
         with open("final_version.py", "r", encoding="utf-8") as f:
             code = f.read()
-        st.code(code, language='python')
+        st.text_area("Python Code", code, height=400)
 
     st.write("")
 
@@ -232,7 +232,7 @@ _Sep 2022 – Jul 2023_
     st.markdown("""
     - **Technical Classes**:  
     Regression, Time Series Forecasting, Data Visualization, Elements of Databases, Practical Machine Learning, Possibility/Statistic Inference, Introduction to Data Science, Matrices and Matrix Calculations, \
-        Calculus, Multivariate Calculus, Statistical Thinking, Elements of Software Design  
+        Calculus, Multivariate Calculus, Statistical Thinking, Elements of Data Analytics
 """)
 
     st.markdown("""
@@ -313,7 +313,7 @@ with tab2:
     - **Technical Classes**:  
     Economics of Auctions, Foundations of Finance, Macroeconomic Theory, Introduction to Econometrics, \
         Math Microeconomics Theory Through Advanced Application, Foundations of Accouting,\
-            Economic Statistics, Economics of Money
+            Economic Statistics, Economics of Money, Advanced Game Theory
     
 """)
 
@@ -327,7 +327,7 @@ st.write("")
 st.markdown('<a name="comp"></a>', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: left;'>Competition Experience</h2>", unsafe_allow_html=True)
 st.markdown("""
-    **Global Case Competition at Harvard** — *Member*  
+    **Global Case Competition at Harvard** — *Leader*  
     _Feb 2025 – Apr 2025_  
     - Designed bar plots, time series line graphs, pie charts with R programming language, and customized slide templates with Canva for competition submissions
     - Reached the solution of acquiring a potential alternative acquisition target after analyzing financial feasibility with Excel and researching the luxury automotive and motorsport markets
