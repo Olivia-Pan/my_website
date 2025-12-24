@@ -57,12 +57,12 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 with col1:
-    image1 = Image.open("DSC06142.jpg")
+    image1 = Image.open("DSC06142.JPG")
     image1 = ImageOps.exif_transpose(image1) 
     st.image(image1, width=600)
 
 with col2:
-    image2 = Image.open("DSC06080.jpg")
+    image2 = Image.open("DSC06080.JPG")
     image2 = ImageOps.exif_transpose(image2) 
     st.image(image2, width=500)
 
