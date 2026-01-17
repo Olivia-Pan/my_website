@@ -78,7 +78,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown(
-    "<hr style='border: 1.5px solid #FF7F50; margin: 40px 0;'>",
+    "<hr style='border: 1px solid #FF7F50; margin: 20px 0;'>",
     unsafe_allow_html=True
 )
 
@@ -95,7 +95,7 @@ st.markdown("""
     """)
 st.markdown('<a name="experience"></a>', unsafe_allow_html=True)
 
-st.write("") 
+
 
 st.write("") 
 #resume
@@ -121,8 +121,8 @@ with tab1:
 
     with open("CS_Stats_finalProject.html", "r",encoding="utf-8") as f:
         projf=f.read()
-
-
+    
+    st.write("")
 
     #proj1
     st.markdown("""
@@ -135,6 +135,8 @@ with tab1:
         html_content = f.read()
     with st.expander("🔽 R Code"):
         st.components.v1.html(html_content, height=500, scrolling=True)
+
+    st.write("")
 
     #proj 2
     st.markdown("""
@@ -158,6 +160,7 @@ with tab1:
     with st.expander("🔽 R Code for Principle Component Analysis"):
         st.components.v1.html(html_content3, height=500, scrolling=True)
 
+    st.write("")
     #proj3
     st.markdown("""
     **Practical Machine Learning Project** — *Member*  
@@ -301,7 +304,7 @@ with tab2:
 # Add collapsible reader
     with st.expander("🔗 Econometrics Research Report"):
         st.components.v1.html(html_content4, height=500, scrolling=True)
-
+    st.write("")
     st.markdown("<h3 style='text-align: left;'>Economics Related Skills and Affiliations</h2>", unsafe_allow_html=True)
 
     st.markdown("""
@@ -322,7 +325,7 @@ with tab2:
     Texas Economics Association
 """, unsafe_allow_html=True)
 
-st.write("")
+
     #outside tabs
 st.markdown('<a name="comp"></a>', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: left;'>Competition Experience</h2>", unsafe_allow_html=True)
